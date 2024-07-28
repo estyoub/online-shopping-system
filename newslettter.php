@@ -31,7 +31,7 @@
 								<li>
 									<a href="https://github.com/estyoub"><i class="fa fa-github"></i></a>
 								</li>
-							</ul>
+							</ul>	
 						</div>
 					</div>
 				</div>
