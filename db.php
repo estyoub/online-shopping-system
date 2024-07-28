@@ -1,12 +1,12 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = "onlineshop";
+$servername = getenv('DB_HOST') ?: 'localhost';
+$username = getenv('DB_USERNAME') ?: 'root';
+$password = getenv('DB_PASSWORD') ?: 'root';
+$db = getenv('DB_DATABASE') ?: 'onlineshop';
 
 // Create connection
-$con = mysqli_connect($servername, $username, $password,$db);
+$con = mysqli_connect($servername, $username, $password, $db);
 
 // Check connection
 if (!$con) {

@@ -11,7 +11,7 @@ session_start();
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Online Shopping</title>
+		 <title>Online Shopping</title>
 
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -122,12 +122,12 @@ session_start();
 			<div id="top-header">
 				<div class="container">
 					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> +91-9535688928</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> puneethreddy951@gmail.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i>Bangalore</a></li>
+						<li><a href="#"><i class="fa fa-phone"></i> +977-9849495981</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> youbraaz7@gmail.com</a></li>
+						<li><a href="#"><i class="fa fa-map-marker"></i>Nepal</a></li>
 					</ul>
 					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-inr"></i> INR</a></li>
+						<li><a href="#"><i class="fa fa-inr"></i> NPR</a></li>
 						<li><?php
                              include "db.php";
                             if(isset($_SESSION["uid"])){
@@ -178,7 +178,7 @@ session_start();
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="index.php" class="logo">
 								<font style="font-style:normal; font-size: 33px;color: aliceblue;font-family: serif">
                                         Online Shop
                                     </font>
@@ -209,7 +209,7 @@ session_start();
 							<div class="header-ctn">
 								<!-- Wishlist -->
 								<div>
-									<a href="https://github.com/puneethreddyhc">
+									<a href="https://github.com/estyoub">
 										<i class="fa fa-github"></i>
 										<span>Github</span>
 										
@@ -219,24 +219,20 @@ session_start();
 
 								<!-- Cart -->
 								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-										<i class="fa fa-shopping-cart"></i>
-										<span>Your Cart</span>
-										<div class="badge qty">0</div>
-									</a>
-									<div class="cart-dropdown"  >
-										<div class="cart-list" id="cart_product">
-										
-											
-										</div>
-										
-										<div class="cart-btns">
-												<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i>  edit cart</a>
-											
-										</div>
-									</div>
-										
-									</div>
+   									 <a href="cart.php" class="dropdown-toggle" aria-expanded="true">
+        								<i class="fa fa-shopping-cart"></i>
+        								<span>Your Cart</span>
+       									<div class="badge qty">0</div>
+   								 	</a>
+    							<div class="cart-dropdown">
+        							<div class="cart-list" id="cart_product">
+       								</div>
+        						<div class="cart-btns">
+            						<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i> edit cart</a>
+       							 		</div>
+    								</div>
+								</div>
+
 								<!-- /Cart -->
 
 								<!-- Menu Toogle -->
