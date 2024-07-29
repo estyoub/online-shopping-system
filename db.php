@@ -1,8 +1,8 @@
 <?php
 
 $servername = getenv('DB_HOST') ?: 'localhost';
-$username = getenv('DB_USERNAME') ?: 'root';
-$password = getenv('DB_PASSWORD') ?: 'root';
+$username = getenv('DB_USERNAME') ?: 'hobo';
+$password = getenv('DB_PASSWORD') ?: 'hobo';
 $db = getenv('DB_DATABASE') ?: 'onlineshop';
 
 // Create connection
