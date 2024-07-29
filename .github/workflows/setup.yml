@@ -14,15 +14,21 @@ jobs:
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.4'
+        php-version: '7.4' # Change this to the PHP version you need
+        extensions: mysqli
 
     - name: Set up .env file
       run: |
-        cp .env.example .env
+        cp .env.example .env || true
         echo "DB_HOST=localhost" >> .env
         echo "DB_USERNAME=root" >> .env
         echo "DB_PASSWORD=root" >> .env
         echo "DB_DATABASE=onlineshop" >> .env
 
-    - name: Start the server
-      run: php -S localhost:8000 -t public &
+    - name: Start the PHP server
+      run: |
+        php -S localhost:8000 -t public &
+        sleep 5 # Give the server time to start
+
+    - name: Verify server is running
+      run: curl --fail http://localhost:8000 || exit 1
