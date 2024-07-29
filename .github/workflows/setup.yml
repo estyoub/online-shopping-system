@@ -28,7 +28,7 @@ jobs:
     - name: Start the PHP server
       run: |
         php -S localhost:8000 -t public &
-        sleep 5 # Give the server time to start
+        sleep 10 # Increase sleep time to ensure server is ready
 
     - name: Verify server is running
       run: curl --fail http://localhost:8000 || exit 1
