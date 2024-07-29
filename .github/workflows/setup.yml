@@ -28,7 +28,13 @@ jobs:
     - name: Start the PHP server
       run: |
         nohup php -S localhost:8000 -t public > server.log 2>&1 &
-        sleep 10 # Increase sleep time to ensure server is ready
+        sleep 20 # Increase sleep time to ensure server is ready
+
+    - name: Check PHP server process
+      run: ps aux | grep 'php -S'
+
+    - name: Print server logs
+      run: cat server.log
 
     - name: Verify server is running
       run: curl --fail http://localhost:8000 || exit 1
