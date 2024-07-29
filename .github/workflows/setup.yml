@@ -27,7 +27,7 @@ jobs:
 
     - name: Start the PHP server
       run: |
-        php -S localhost:8000 -t public &
+        nohup php -S localhost:8000 -t public > server.log 2>&1 &
         sleep 10 # Increase sleep time to ensure server is ready
 
     - name: Verify server is running
