@@ -1,5 +1,7 @@
 <?php
 
+require 'vendor/autoload.php';
+
 $servername = getenv('DB_HOST') ?: 'localhost';
 $username = getenv('DB_USERNAME') ?: 'hobo';
 $password = getenv('DB_PASSWORD') ?: 'hobo';
@@ -12,6 +14,6 @@ $con = mysqli_connect($servername, $username, $password, $db);
 if (!$con) {
     die("Connection failed: " . mysqli_connect_error());
 }
-
+echo "Connected successfully";
 
 ?>
